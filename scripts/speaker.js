@@ -10,6 +10,7 @@ class Speaker {
 
         // Connect the gain to the audio context
         this.gain.connect(this.finish);
+        this.gain.setValueAtTime(0, this.audioCtx.currentTime);
     }
 
     play(frequency) {
